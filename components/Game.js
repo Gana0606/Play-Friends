@@ -41,16 +41,22 @@ const Game = () => {
   }, [board]);
 
   return (
-    <div className={styles.board}>
-      {board.map((row, rowIndex) => (
-        <div key={rowIndex} className={styles.row}>
-          {row.map((tile, colIndex) => (
-            <div key={colIndex} className={`${styles.tile} ${styles[`tile${tile}`]}`}>
-              {tile !== null ? tile : ''}
-            </div>
-          ))}
-        </div>
-      ))}
+    <div className={styles.page}> 
+
+      <div className={styles.board}>
+        {board.map((row, rowIndex) => (
+          <div key={rowIndex} className={styles.row}>
+            {row.map((tile, colIndex) => (
+              <div key={colIndex} className={`${styles.tile} ${styles[`tile${tile}`]}`}>
+                {tile !== null ? tile : ''}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+     
+
     </div>
   );
 };

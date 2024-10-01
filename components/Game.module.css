@@ -1,9 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
 .board {
     display: grid;
     grid-template-rows: repeat(4, 100px);
     grid-gap: 10px;
     margin: 20px auto;
-    max-width: 420px;
+    max-width: 450px;
     background-color: #bbada0;
     padding: 10px;
     border-radius: 10px;
@@ -21,7 +26,7 @@
     justify-content: center;
     background-color: #cdc1b4;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 35px;
     font-weight: bold;
     color: #776e65;
     height: 100px;
@@ -30,5 +35,12 @@
   
   .tile2 { background-color: #eee4da; }
   .tile4 { background-color: #ede0c8; }
-  /* Add styles for other tile values */
-  
+  .tile8 { background-color: #F2B179; }
+  .tile16 { background-color: #F59563; }
+  .tile32 { background-color: #F67C5F; }
+  .tile64 { background-color: #F65E3B; }
+  .tile128 { background-color: #EDCF72; }
+  .tile256 { background-color: #EDCC61; }
+  .tile512 { background-color: #EDC850; }
+  .tile1024 { background-color: #EDC53F; }
+  .tile2048 { background-color: #EDC22E; }
