@@ -1,11 +1,10 @@
 import React from 'react';
-import Game from '../components/Game';
+import { SidebarDemo} from '../components/Sidebar';
 
 const HomePage = () => {
   return (
     <div>
-      <h1>2048 Game</h1>
-      <Game />
+      <SidebarDemo />
     </div>
   );
 };

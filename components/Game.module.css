@@ -1,7 +1,9 @@
-.page {
+/* .page {
   display: flex;
   flex-direction: column;
-}
+} */
+
+
 
 .board {
     display: grid;
@@ -9,9 +11,9 @@
     grid-gap: 10px;
     margin: 20px auto;
     max-width: 450px;
-    background-color: #bbada0;
     padding: 10px;
     border-radius: 10px;
+    margin-bottom: 20px; /* Make space for the buttons */
   }
   
   .row {
@@ -25,22 +27,111 @@
     align-items: center;
     justify-content: center;
     background-color: #cdc1b4;
+    font-size: 25px;
     border-radius: 10px;
-    font-size: 35px;
-    font-weight: bold;
     color: #776e65;
     height: 100px;
     width: 100px;
   }
   
-  .tile2 { background-color: #eee4da; }
-  .tile4 { background-color: #ede0c8; }
-  .tile8 { background-color: #F2B179; }
-  .tile16 { background-color: #F59563; }
-  .tile32 { background-color: #F67C5F; }
-  .tile64 { background-color: #F65E3B; }
-  .tile128 { background-color: #EDCF72; }
-  .tile256 { background-color: #EDCC61; }
-  .tile512 { background-color: #EDC850; }
-  .tile1024 { background-color: #EDC53F; }
-  .tile2048 { background-color: #EDC22E; }
+  .tile2 { background-color: #e8eaf6; }
+  .tile4 { background-color: #d1c4e9; }
+  .tile8 { background-color: #f8bbd0; }
+  .tile16 { background-color: #f48fb1; }
+  .tile32 { background-color: #ffccbc; }
+  .tile64 { background-color: #ffab91; }
+  .tile128 { background-color: #ffcc80; }
+  .tile256 { background-color: #ffb74d; }
+  .tile512 { background-color: #aed581; }
+  .tile1024 { background-color: #81c784; }
+  .tile2048 { background-color: #4dd0e1; }
+  .tile4096 { background-color: #26c6da;}
+
+  .gameOverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Make sure it appears above the tiles */
+    pointer-events: none; /* Ensure buttons outside the overlay can still be clicked */
+  }
+  
+.gameOverText {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.includingGame {
+  display: flex;
+  justify-content: left;
+  margin: 150px 150px 150px 300px;
+}
+
+.gameContainer {
+  position: relative;
+}
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  background-color: #8f7a66;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+@keyframes newTile {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.tileNew {
+  animation: newTile 0.3s ease-out;
+}
+
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.scoreLabel {
+  margin-right: 10px;
+}
+
+.scoreValue {
+  background-color: #bbada0;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
